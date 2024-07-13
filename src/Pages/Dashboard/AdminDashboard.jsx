@@ -61,18 +61,18 @@ const AdminDashboard = () => {
 
   const salesData = {
     labels: [
-      "January",
-      "Febraury",
-      "March",
-      "April",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
       "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
     fontColor: "white",
     datasets: [
@@ -80,6 +80,7 @@ const AdminDashboard = () => {
         label: "Sales / Month",
         data: monthlySalesRecord,
         backgroundColor: ["rgb(255, 99, 132)"],
+        // backgroundColor: ["red"],
         borderColor: ["white"],
         borderWidth: 2,
       },
@@ -111,17 +112,17 @@ const AdminDashboard = () => {
 
   return (
     <HomeLayout>
-      <div className="min-h-[90vh] pt-5 flex flex-col flex-wrap gap-10 text-white">
+      <div className="min-h-[90vh] w-[100vw] pt-5 flex flex-col  gap-10 text-white">
         <h1 className="text-center text-3xl font-semibold text-yellow-500">
           Admin Dashboard
         </h1>
 
         {/* creating the records card and chart for sales and user details */}
-        <div className="grid grid-cols-2 gap-5 m-auto mx-10">
+        <div className="grid sm:grid-cols-2  w-[100%] gap-5 m-auto mx-10">
           {/* displaying the users chart and data */}
           <div className="flex flex-col items-center gap-10 p-5 shadow-lg rounded-md">
             {/* for displaying the pie chart */}
-            <div className="w-80 h-80">
+            <div className="w-80">
               <Pie data={userData} />
             </div>
 
@@ -130,7 +131,7 @@ const AdminDashboard = () => {
               {/* card for registered users */}
               <div className="flex items-center justify-between py-5 px-5 gap-5 rounded-md shadow-md">
                 <div className="flex flex-col items-center">
-                  <p className="font-semibold">Registered Users</p>
+                  <p className="font-semibold text-white">Registered Users</p>
                   <h3 className="text-4xl font-bold">{allUsersCount}</h3>
                 </div>
                 <FaUsers className="text-yellow-500 text-5xl" />

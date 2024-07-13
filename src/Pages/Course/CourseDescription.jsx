@@ -12,9 +12,9 @@ const CourseDescription = () => {
   const { role, data } = useSelector((state) => state.auth);
   return (
     <HomeLayout>
-      <div className="min-h-[90vh] pt-12 px-20 flex flex-col items-center justify-center text-white">
+      <div className="min-h-[90vh] pt-12 px-2 flex flex-col items-center justify-center text-white">
         {/* displaying the course details */}
-        <div className="grid  sm:w-[80%] md:w-[70%] w-[90%] lg:w-[70%] sm:grid-cols-2 grid-row gap-10 py-10 relative">
+        <div className="grid  sm:w-[90%] md:w-[70%] w-[90%] lg:w-[70%] sm:grid-cols-2 grid-row gap-10 py-10 relative">
           {/* creating the left side of description box */}
           <div className="space-y-5">
             <img
@@ -25,12 +25,12 @@ const CourseDescription = () => {
 
             {/* course details */}
             <div className="space-y-4">
-              <div className="flex items-center justify-between text-xl">
+              <div className="flex sm:flex-col md:flex-row items-center justify-between  sm:text-l">
                 <p className="font-semibold">
                   <span className="text-yellow-500 font-bold">
-                    Total Lectures : 
-                  </span>
-                  {state.numbersOfLectures}
+                    Total Lectures :  
+                  </span> 
+                   {state.numbersOfLectures}
                 </p>
                 <p className="font-semibold">
                   <span className="text-yellow-500 font-bold">Instructor : </span>

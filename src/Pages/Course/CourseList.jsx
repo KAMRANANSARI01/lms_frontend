@@ -20,14 +20,14 @@ const CourseList = () => {
 
   return (
     <HomeLayout>
-      <div className="min-h-[90vh] pt-12 pl-20 flex flex-col flex-wrap gap-10 text-white">
-        <h1 className="text-center text-3xl font-semibold">
+      <div className="min-h-[90vh] w-full pt-20 ox-3 flex flex-col items-center justify-center m-auto flex-wrap gap-10 text-white">
+        <h1 className="text-center px-3 text-3xl font-semibold">
           Explore the courses made by{" "}
           <span className="font-bold text-yellow-500">Industry Experts</span>
         </h1>
 
         {/* wrapper for courses card */}
-        <div className="mb-10 flex flex-wrap gap-14">
+        <div className="mb-10 flex justify-center items-center flex-wrap gap-10">
           {courseData?.map((element) => {
             return <CourseCard key={element._id} data={element} />;
           })}

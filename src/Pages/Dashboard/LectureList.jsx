@@ -34,16 +34,16 @@ const LectureList = () => {
 
   return (
     <HomeLayout>
-      <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
+      <div className="flex flex-col  gap-10 items-center justify-center min-h-[90vh] py-14 text-white mx-[5%]">
         {/* displaying the course name */}
 
         <h1 className="text-center text-2xl font-semibold text-yellow-500">
           Course Name : {state?.title}
         </h1>
 
-        <div className="flex justify-center gap-10 w-full">
+        <div className="flex flex-col md:flex-row  justify-center items-center  sm:items-start lg:w-[70%] gap-10 px-2 w-full">
           {/* left section for playing the video and displaying course details to admin */}
-          <div className="space-y-5 w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
+          <div className="space-y-5 w-[90%] sm:w-[70%]  p-2 rounded-lg shadow-[0_0_10px_black]">
             <video
               className="object-fill rounded-tl-lg rounded-tr-lg w-full"
               src={lectures && lectures[currentVideo]?.lecture?.secure_url}
@@ -68,7 +68,7 @@ const LectureList = () => {
           </div>
 
           {/* right section for displaying all the lectures of the course */}
-          <ul className="w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black] space-y-4">
+          <ul className="w-[90%] sm:w-[70%] p-2 rounded-lg shadow-[0_0_10px_black] space-y-4">
             <li className="font-semibold text-xl text-yellow-500 flex items-center justify-between">
               <p>Lectures List</p>
               {role === "ADMIN" && (
